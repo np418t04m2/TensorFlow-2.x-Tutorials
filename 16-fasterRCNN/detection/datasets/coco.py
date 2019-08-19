@@ -30,7 +30,7 @@ class CocoDataSet(object):
             raise AssertionError('subset must be "train" or "val".')
             
 
-        self.coco = COCO("{}/annotations/instances_{}2017.json".format(dataset_dir, subset))
+        self.coco = COCO("{}/annotations/panoptic_{}2017.json".format(dataset_dir, subset))
 
         # get the mapping from original category ids to labels
         self.cat_ids = self.coco.getCatIds()
